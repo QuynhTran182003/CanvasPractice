@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Practice</title>
+</head>
+<style>
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    #html5colorpicker{
+        width: 50px;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    div{
+        margin: 5px;
+    }
+</style>
+<body>
+    <nav>
+        <div class="toolGrp" style="display: flex; flex-direction: row">
+            <div>
+                <input type="radio" id="paint-small" name="paint" checked>
+                <label for="paint-small">
+                    <img src="Icons\paint-brush-small.png" alt="paint-brush-small">
+                </label>
+            </div> 
+            <div>
+                <input type="radio" id="paint-big" name="paint" >
+                <label for="paint-big">
+                    <img src="Icons\paint-brush-big.png" alt="paint-brush-big">
+                </label>
+            </div>
+            <div>
+                <input type="radio" id="eraser" name="paint" >
+                <label for="eraser">
+                    <img src="Icons\eraser.png" alt="eraser">
+                </label>
+            </div>
+        </div>
+        
+
+        <div>
+            <label for="html5colorpicker">Color: </label>
+            <input type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="#000000" itemid="color">
+        </div>
+        <div>
+            <button class="clear">Clear</button>
+            <button class="save">Save to lcStg</button>
+            <button class="load">Load from lcStg</button>
+        </div>
+        
+    </nav>
+    <div class="content">
+        <canvas id="myCanvas" width="800" height="500"
+            style="border:1px solid #000000; margin: 0 auto;">
+        </canvas>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
